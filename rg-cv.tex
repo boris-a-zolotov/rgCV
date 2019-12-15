@@ -1,0 +1,128 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsfonts,amssymb,amsmath,amsthm,mathtools}
+\usepackage{graphicx,xcolor,caption,subcaption,hyperref}
+\usepackage[russian]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns}
+\makeatletter
+\newcommand\currentcoordinate{\the\tikz@lastxsaved,\the\tikz@lastysaved}
+\makeatother
+
+\RequirePackage[margin=2.05cm,top=2.5cm,bottom=1.7cm]{geometry}
+\linespread{1.08} \parskip=0.1in \parindent=0.4in
+
+\usepackage{fancyhdr} \pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.22mm}
+\headheight=16pt \headsep=6mm \footskip=6mm
+
+\def\defaultstyle{
+	\fancyhead[LO,LE]{{\sffamily Curriculum Vitae}}
+	\fancyhead[RO,RE]{{\sffamily {\large Boris Zolotov,} {\footnotesize МКН СПбГУ}}}
+	\fancyhead[CO,CE]{\ } \fancyfoot[CO,CE]{\thepage}
+} \defaultstyle
+
+\begin{document}
+
+	\definecolor{tdefault}{RGB}{35,120,95}
+	\def\tlineskip{0.545 cm}
+	\def\tline#1#2{++(-0.6,-\tlineskip ) node[left]{#1} ++(0.6,0) node[right]{#2}}
+	\def\tnline{++(0,-0.21cm)}
+
+\def\tsection#1#2{
+ \begin{center} \tikz{
+     \fill[fill=tdefault] (-5,-0.13) rectangle (-0.6,0.13);
+     \fill[fill=white] (0,-0.13) rectangle (11.8,0.13);
+     \draw(0,0) node[right] {\LARGE\sffamily\textcolor{tdefault}{#1}}
+	\tnline\tnline #2 ;
+  } \end{center} \smallskip
+}
+
+\begin{center} \ \\ [1.5cm]
+	{\Huge Boris Zolotov} \\ [0.35cm]
+	{\textcolor{gray}{\it boris.a.zolotov@yandex.com \hspace{1.75cm} +7\,911\,764\,70\,83}}
+\end{center} \vspace{0.75cm}
+
+\tsection{Research Interests}{
+	\tline{}{Theoretical computer science: algorithms, data structures,}
+	\tline{}{computational geometry, automated proof systems}
+}
+
+\tsection{Professional Appointments}{
+		\tline{2019–present}{{\bfseries Student,} St. Petersburg State University,}
+		\tline{}{„Modern Mathematics“ master programme}
+\tnline	\tline{2015–present}{Additional courses {\bf tutor} and research projects {\bf supervisor,}}
+		\tline{}{Laboratory for Continuous Mathematical Education, St. Petersburg}
+\tnline	\tline{2018–present}{Mathematics for Olympiads {\bf tutor,}}
+		\tline{}{„Fractal“, St. Petersburg}
+\tnline	\tline{2016–present}{{\bf Co-Chair of Methodical Commission,}}
+		\tline{}{«Математика НОН-СТОП», Time for Science foundation}
+}
+
+\tsection{Bachelor's Thesis}{
+	\tline{\bf Title}{Algorithmic Aspects of Alexandrov's Uniqueness Theorem}
+	\tline{\bf Supervisor}{Candidate of Physics and Mathematics E. A. Arseneva}
+	\tline{\bf Grade}{Excellent}
+}
+
+\tsection{Grants}{
+	\tline{September 2019–present}{2019 competition of the Foundation for the Advancement}
+	\tline{}{of Theoretical Physics and Mathematics „BASIS“}
+} \vfill\eject \ \\ [-0.15cm]
+
+\tsection{Conferences, schools and workshops}{
+		\tline{July 2019}{XVIII Spanish Meeting on Computational Geometry,}
+		\tline{}{Girona, Spain, Presentation: {\it „A complete list of all convex}}
+		\tline{}{\it polyhedra made by gluing regular pentagons“}
+\tnline	\tline{June 2019}{Second Trans-Siberian Workshop on}
+		\tline{}{Computational Geometry and Data Structures}
+\tnline	\tline{November 2016}{Winter School on cubic plane curves, HSE, Moscow}
+}
+
+\tsection{Publications}{
+		\tline{September 2019}{Elena Arseneva, John Iacono, Greg Koumoutsos,}
+		\tline{}{Stefan Langerman, Boris Zolotov,}
+		\tline{}{\it Sublinear Explicit Incremental Planar Voronoi Diagrams,}
+		\tline{}{In proceedings of the Japan Conference}
+		\tline{}{on Discrete and Computational Geometry, Graphs, and Games}
+\tnline	\tline{September 2019}{Elena Arseneva, Stefan Langerman, and Boris Zolotov,}
+		\tline{}{\it A complete list of all convex polyhedra made by gluing}
+		\tline{}{{\it regular pentagons,} In proceedings of the}
+		\tline{}{Japan Conference on Discrete and Computational}
+		\tline{}{Geometry, Graphs, and Games}
+\tnline	\tline{April 2015}{Boris Zolotov, {\it Another Solution to the}}
+		\tline{}{\it Thue Problem of Non-Repeating Words}
+		\tline{}{ar$\chi$iv 1505.00019,\quad 1 citation}
+}
+
+\tsection{Books and Brochures}{
+		\tline{February 2019}{Б. А. Золотов, Д. Г. Штукенберг, И. А. Чистяков,}
+		\tline{}{А. В. Семенов, И. С. Алексеев,}
+		\tline{}{\it Сборник задач олимпиады «Математика НОН-СТОП»,}
+		\tline{}{373 с., ISBN 978-5-906623-38-6}
+\tnline	\tline{December 2019}{Б. А. Золотов, Д. Г. Штукенберг,}
+		\tline{}{\it Математика НОН-СТОП—2019. Решения задач олимпиады,}
+		\tline{}{72 с., ISBN 978-5-906623-47-8}
+} \vfill\eject \ \\ [-0.15cm]
+
+\tsection{Community service}{
+	\tline{April 2021}{{\bf Organising committee} of 37th EuroCG, planned}
+	\tnline
+	\tline{April 2018–present}{{\bf Assistant \TeX -er} of Joint Projects of}
+	\tline{}{PJSC Gazprom Neft and Chebyshev Laboratory}
+}
+
+\tsection{Supervised research projects of 8–10-graders}{
+		\tline{2018}{К. Кузнецов, {\it «О приближении кривых»}}
+\tnline	\tline{2019}{А. Ващенков, {\it «Римская десятичная система счисления»}}
+\tnline	\tline{}{И. Глаголев, {\it «Циркуляции на графах»}}
+\tnline	\tline{2020}{А. Ващенков, {\it «Алгоритм Чена—Хана для развёрток}}
+		\tline{}{\it из квадратов»}
+\tnline	\tline{}{И. Глаголев, {\it «Перечисление всех развёрток из квадратов»}}
+\tnline	\tline{}{К. Пакульневич, {\it «Проверка изоморфизма развёрток}}
+		\tline{}{\it из квадратов»}
+\tnline	\tline{}{Е. Дойникова, {\it «Миаметры»}}
+}
+
+\end{document}
