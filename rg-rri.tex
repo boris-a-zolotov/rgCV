@@ -11,7 +11,7 @@
 \makeatother
 
 \RequirePackage[margin=2.05cm,top=2.5cm,bottom=1.7cm]{geometry}
-\linespread{1.08} \parskip=0.1in \parindent=0.4in
+\linespread{1.08} \parskip=0.14cm \parindent=0.4in
 
 \usepackage{fancyhdr} \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.22mm}
@@ -30,6 +30,8 @@
 \newtheorem{definition}{Definition}
 \newtheorem{assu}{Assumption}
 
+\addto\captionsrussian{\renewcommand\bibname{References}}
+
 \begin{document}
 \definecolor{tdefault}{RGB}{35,120,95}
 \def\P{\mathcal P} \def\Ot{\tilde O}
@@ -39,46 +41,22 @@
 	{Recent results and ongoing research}
 \end{center}
 
-\section{All convex polygons that can be glued from regular pentagons}
-%	Теорема Александрова — формулировка + мотивация, неконструкт. док-во
-%	Для ТИнф всё ещё открытый вопрос, Demaine
-
-%	Список литературы: Александров, Demaine
-%	Книжка про диаграммы Вороного (Ауренхаммер), Allen et. al
-
-What had already been done is the enumeration of all edge-to-edge gluings of regular pentagons satisfying the conditions of the Alexandrov's Uniqueness Theorem. In my work I solved the problem of establishing the graph structure of convex polyhedra that are glued from regular pentagons edge-to-edge.
-
-I derived an upper bound for discrepancy in vertex coordinates between the unique convex polyhedron corresponding to a given polyhedral metric and a given approximate polyhedron:
-
-%	Remove
-
-\begin{theorem} \label{precision}
-	Suppose $\mu$ is the maximum edge discrepancy between $P$ and $\P$, $\gamma$ is the maximum angle discrepancy between $P$ and $\P$, $\mathcal D$ is the maximum degree of a vertex of $P$. If $\mathcal D \gamma < \pi / 2$, then each vertex of $\P$ lies within an $r$--ball centered at the corresponding vertex of $P$, where
-\begin{equation}
-	r = E^2 \cdot  L \cdot 2 \sin ( \mathcal D \gamma / 2 ) + E \mu.
-\end{equation} \end{theorem}
-
-This implies a sufficient condition for the polyhedron to have a certain edge. I also developed the program that checks this condition.
-
-Geometric methods can also be applied for establishing the graph structures that are non-simplicial. In particular I proved that two of the polyhedra glued from regular pentagons have quadrilateral faces. Applying the same type of argument, I gave an alternative proof for the existence of one of the edges in the polyhedron glued from 6 regular pentagons.
-
-While the main outcome of this work is the full list of the polyhedra that are obtained by edge-to-edge gluings of regular pentagons, the methods for obtaining it are of independent interest and may be applied to other problems of the same flavour which gives this work a lot of implications related to considering different polygons and gluings composed of them.
-
-The result has been presented at EGC 2019 and is now awaiting publication in the special issue of Journal of Information Processing.
-
 \section{Sublinear Explicit Incremental Planar Voronoi Diagrams}
-%	Definition of Voronoi diagram (short), $n$
-%	Изучаются давно, от Вороного […] до современности […]
-%	Цель: мы стремимся за под-линию поддерживать её граф
 
-We create a data structure that explicitly maintains the graph of a Voronoi diagram under insertion of new sites. The diagram is stored in adjacency list format on which primitive operations, including links and cuts, are performed.
+	Let $S \coloneqq \{s_1, s_2, \ldots, s_N\}$ be a set of $N$ distinct points in the plane. \emph{Voronoi diagram} of $S$ is the subdivision of the plane into $N$ \emph{cells}, one for each site in $S$, with the property that a point $q$ lies in the cell corresponding to a site $s_i$ if and only if
+	$$\mathrm{dist} (q, s_i) < \mathrm{dist} (q, s_j)$$
+	for each $s_j \in S$ with $j \ne i$.
+
+Voronoi diagrams have been of a great interest in TCS and computation geometry since their discovery~\cite{v-vd} until now~\cite{vd-new}. The aim of this work is to maintain the graph of a Voronoi diagram in time sublinear in $N$ under insertion of a new site.
+
+We create a data structure that explicitly maintains the graph of a Voronoi diagram. The diagram is stored in adjacency list format on which primitive operations, including links and cuts, are performed.
 
 It was observed previously that while there could be a linear number of changes to the embedded Voronoi diagram with each site insertion, this is not equivalent to the number of combinatorial changes to the graph structure of the Voronoi diagram.
 It was then proved by showing that the amortized number of combinatorial changes is only $\Theta(N^{\frac 12})$ per site insertion.
 
-This observation opened the possibility to maintain the Voronoi diagram graph in faster than linear time per insertion, which was consequently done for the restricted case where the sites are in convex position.
+This observation opened the possibility to maintain the Voronoi diagram graph in faster than linear time per insertion, which was consequently done for the restricted case where the sites are in convex position~\cite{incremental-vd}.
 
-The new result is a data structure that explicitly maintains the graph of a Voronoi diagram of arbitrary point sites in the plane while allowing insertions of new sites in $\Ot (N^{\frac 34})$ expected amortized time, where $\Ot$ suppresses polylogarithmic terms. 
+Our data structure allows insertions of new sites in $\Ot (N^{\frac 34})$ expected amortized time, where $\Ot$ suppresses polylogarithmic terms. 
 
 Previously, no sublinear method was known for this problem—this is what makes the result outstanding.
 
@@ -87,15 +65,34 @@ The result has been presented at JCDCGGG$^3$ and is now awaiting publication in 
 \section{Ongoing research: \\
 	\~Optimal-Time Incremental Combinatorial Voronoi Diagrams}
 
-%	Сублинейно, но всё ещё не оптимально. А теперь хотим оптимально.
-Continuing the previous work we asked ourselves the question: is it possible to store the graph of a Voronoi diagram and update it with each site insertion in time $\Ot(n)$ where $n$ is number of combinatorial changes per insertion? This would result in $\Ot(N^\frac12)$ expected amortised time per insertion (where $N$ is the number of sites), which is optimal possible time up to a polylogarithmic factor.
+The time per insertion of a new site in our previous work is sublinear yet not optimal. We are now aiming at maintaining the Voronoi diagram while having optimal, $\Ot(N^{\frac12})$ time per insertion.
 
-%	One idea is to use d-n-c
-%	Hierarchy structure induced (similar to) by d-n-c strategy
-%	compute diagram in the static case
-Turns out it must be possible to do using divide-and-conquer strategy. There is a known divide-and-conquaer algorithm for the static case of the Voronoi diagram, however it does not fit for semi-dynamic case and several significant changes have to be introduced.
+Our idea is to use divide-and-conquer strategy. There is a known divide-and-conquaer algorithm for the static case of the Voronoi diagram, but it does not fit directly for semi-dynamic case.
 
-%	Obtain the result
-My coauthors and I are now working on this and hoping to publish it or present it at a conference in the near future.
+My coauthors and I are now working on this and hoping to obtain the result soon.
+
+\section{All convex polygons that can be glued from regular pentagons}
+
+	A \emph{net} is a set of polygons equipped with a number of rules describing the way edges of these polygons must be glued to each other.
+
+\begin{theorem}[Alexandrov, 1950,~\cite{alex}]
+\label{thm:alexandrov}
+	If a net is homeomorphic to a sphere and the sum of angles at each of its vertices is at most $360^\circ$ then there is a single convex polyhedron $P$ that can be glued from this net.
+\end{theorem}
+
+However, the proof of this theorem is highly non-constructive, and the algorithmic question of \emph{constructing} the polyhedron $P$, its 1-dimensional skeleton and coordinates of the vertices, remains open for around 60 years.
+
+To get closer to the solution of this problem one can solve some of its restricted cases. One way is to consider a single polygon of a particular type, i.e. a regular polygon, and {\it edge-to-edge} gluings (an edge of a polygon $T_i$ needs to be glued to an entire other edge of another polygon $T_j$, possibly $j=i$) of its several copies~\cite{gfalop}.
+
+What had already been done is the enumeration of all edge-to-edge gluings of regular pentagons satisfying the conditions of the Alexandrov's Uniqueness Theorem. In my work I solved the problem of establishing the graph structure of convex polyhedra that are glued from regular pentagons edge-to-edge.
+
+I derived an upper bound for discrepancy in vertex coordinates between the unique convex polyhedron corresponding to a given polyhedral metric and a given approximate polyhedron, this implied a sufficient condition for the polyhedron to have a certain edge. I developed the program that checks this condition. I also applied geometric methods to establish the graph structures that are non-simplicial.
+
+The main outcome of this work is the full list of the polyhedra that are obtained by edge-to-edge gluings of regular pentagons. However, the methods for obtaining it are of independent interest and may be applied to other problems of the same flavour which gives this work a lot of implications related to considering different polygons and gluings composed of them.
+
+The result has been presented at EGC 2019 and is now awaiting publication in the special issue of Journal of Information Processing.
+
+\bibliographystyle{abbrv}
+\bibliography{rg}
 
 \end{document}
