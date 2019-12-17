@@ -40,10 +40,17 @@
 \end{center}
 
 \section{All convex polygons that can be glued from regular pentagons}
+%	Теорема Александрова — формулировка + мотивация, неконструкт. док-во
+%	Для ТИнф всё ещё открытый вопрос, Demaine
+
+%	Список литературы: Александров, Demaine
+%	Книжка про диаграммы Вороного (Ауренхаммер), Allen et. al
 
 What had already been done is the enumeration of all edge-to-edge gluings of regular pentagons satisfying the conditions of the Alexandrov's Uniqueness Theorem. In my work I solved the problem of establishing the graph structure of convex polyhedra that are glued from regular pentagons edge-to-edge.
 
 I derived an upper bound for discrepancy in vertex coordinates between the unique convex polyhedron corresponding to a given polyhedral metric and a given approximate polyhedron:
+
+%	Remove
 
 \begin{theorem} \label{precision}
 	Suppose $\mu$ is the maximum edge discrepancy between $P$ and $\P$, $\gamma$ is the maximum angle discrepancy between $P$ and $\P$, $\mathcal D$ is the maximum degree of a vertex of $P$. If $\mathcal D \gamma < \pi / 2$, then each vertex of $\P$ lies within an $r$--ball centered at the corresponding vertex of $P$, where
@@ -60,6 +67,9 @@ While the main outcome of this work is the full list of the polyhedra that are o
 The result has been presented at EGC 2019 and is now awaiting publication in the special issue of Journal of Information Processing.
 
 \section{Sublinear Explicit Incremental Planar Voronoi Diagrams}
+%	Definition of Voronoi diagram (short), $n$
+%	Изучаются давно, от Вороного […] до современности […]
+%	Цель: мы стремимся за под-линию поддерживать её граф
 
 We create a data structure that explicitly maintains the graph of a Voronoi diagram under insertion of new sites. The diagram is stored in adjacency list format on which primitive operations, including links and cuts, are performed.
 
@@ -77,10 +87,15 @@ The result has been presented at JCDCGGG$^3$ and is now awaiting publication in 
 \section{Ongoing research: \\
 	\~Optimal-Time Incremental Combinatorial Voronoi Diagrams}
 
-Continuing the previous work we asked ourselves the question: is it possible to store the graph of a Voronoi diagram and update it with each site insertion in time $\Ot(n)$ where $n$ is number of combinatorial changes per insertion? This would result in $\Ot(N^\frac12)$ expected amortised time per insertion, which is optimal possible time up to a polylogarithmic factor.
+%	Сублинейно, но всё ещё не оптимально. А теперь хотим оптимально.
+Continuing the previous work we asked ourselves the question: is it possible to store the graph of a Voronoi diagram and update it with each site insertion in time $\Ot(n)$ where $n$ is number of combinatorial changes per insertion? This would result in $\Ot(N^\frac12)$ expected amortised time per insertion (where $N$ is the number of sites), which is optimal possible time up to a polylogarithmic factor.
 
+%	One idea is to use d-n-c
+%	Hierarchy structure induced (similar to) by d-n-c strategy
+%	compute diagram in the static case
 Turns out it must be possible to do using divide-and-conquer strategy. There is a known divide-and-conquaer algorithm for the static case of the Voronoi diagram, however it does not fit for semi-dynamic case and several significant changes have to be introduced.
 
+%	Obtain the result
 My coauthors and I are now working on this and hoping to publish it or present it at a conference in the near future.
 
 \end{document}
