@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{amsfonts,amssymb,amsmath,amsthm,mathtools}
 \usepackage{graphicx,xcolor,caption,subcaption,hyperref}
+\usepackage[numbers,sort]{natbib}
 \usepackage[russian]{babel}
 \usepackage[utf8x]{inputenc}
 
@@ -43,18 +44,16 @@
 
 \vsection{Sublinear Explicit Incremental Planar Voronoi Diagrams}
 
-	Let $S \coloneqq \{s_1, s_2, \ldots, s_N\}$ be a set of $N$ distinct points in the plane. \emph{Voronoi diagram} of $S$ is the subdivision of the plane into $N$ \emph{cells}, one for each site in $S$, with the property that a point $q$ lies in the cell corresponding to a site $s_i$ if and only if $\mathrm{dist} (q, s_i) < \mathrm{dist} (q, s_j)$ for each $s_j \in S$ with $j \ne i$.
+	Let $S \coloneqq \{s_1, s_2, \ldots, s_N\}$ be a set of $N$ distinct points in the Euclidean plane. \emph{Voronoi diagram} of $S$ is the subdivision of the plane into $N$ \emph{cells}, one for each site in $S$, with the property that a point $q$ lies in the cell corresponding to a site $s_i$ if and only if $\mathrm{dist} (q, s_i) < \mathrm{dist} (q, s_j)$ for each $s_j \in S$ with $j \ne i$.
 
-Voronoi diagrams have been of a great interest in TCS and computation geometry since their discovery~\cite{v-vd} until now~\cite{vd-new}. The aim of this work is to maintain the graph of a Voronoi diagram in time sublinear in $N$ under insertion of a new site.
+Voronoi diagrams have been of a great interest in TCS (computational geometry and other domains) since their first thorough study~\cite{v-vd} and the research on the subject is still going on~\cite{vd-new}. The aim of this work is to maintain the graph of a Voronoi diagram under insertion of new sites in time sublinear in $N$.
 
-We create a data structure that explicitly maintains the graph of a Voronoi diagram. The diagram is stored in adjacency list format on which primitive operations, including links and cuts, are performed.
-
-It was observed previously that while there could be a linear number of changes to the embedded Voronoi diagram with each site insertion, this is not equivalent to the number of combinatorial changes to the graph structure of the Voronoi diagram.
+It was observed previously~\cite{incremental-vd} that while there could be a linear number of changes to the embedded Voronoi diagram with each site insertion, this is not equivalent to the number of combinatorial changes to the graph structure of the Voronoi diagram.
 It was then proved by showing that the amortized number of combinatorial changes is only $\Theta(N^{\frac 12})$ per site insertion.
 
 This observation opened the possibility to maintain the Voronoi diagram graph in faster than linear time per insertion, which was consequently done for the restricted case where the sites are in convex position~\cite{incremental-vd}.
 
-Our data structure allows insertions of new sites in $\Ot (N^{\frac 34})$ expected amortized time, where $\Ot$ suppresses polylogarithmic terms. Previously, no sublinear method was known for this problem—this is what makes the result outstanding. The result has been presented at JCDCGGG$^3$ and is now awaiting publication in the special issue of Journal of Information Processing.
+We create a data structure that explicitly maintains the graph of a Voronoi diagram. The diagram is stored in adjacency list format on which primitive operations, including links and cuts, are performed. Our data structure allows insertions of new sites in $\Ot (N^{\frac 34})$ expected amortized time, where $\Ot$ suppresses polylogarithmic terms. Previously, no sublinear method was known for this problem. The result has been presented at JCDCGGG$^3$ conference~\cite{sevd} and is now awaiting publication in the special issue of Journal of Information Processing.
 
 \vsection{Ongoing research: \~Optimal-Time Incremental \\
 	Combinatorial Voronoi Diagrams}
@@ -80,7 +79,7 @@ What had already been done is the enumeration of all edge-to-edge gluings of reg
 
 I derived an upper bound for discrepancy in vertex coordinates between the unique convex polyhedron corresponding to a given polyhedral metric and a given approximate polyhedron, this implied a sufficient condition for the polyhedron to have a certain edge. I developed the program that checks this condition. I also applied geometric methods to establish the graph structures that are non-simplicial.
 
-The main outcome of this work is the full list of the polyhedra that are obtained by edge-to-edge gluings of regular pentagons. However, the methods for obtaining it are of independent interest and may be applied to other problems of the same flavour which gives this work a lot of implications related to considering different polygons and gluings composed of them. The result has been presented at EGC 2019 and is now awaiting publication in the special issue of Journal of Information Processing.
+The main outcome of this work is the full list of the polyhedra that are obtained by edge-to-edge gluings of regular pentagons. However, the methods for obtaining it are of independent interest and may be applied to other problems of the same flavour which gives this work a lot of implications related to considering different polygons and gluings composed of them. I presented this result at EGC 2019~\cite{egc-penta}. It is now awaiting publication in the special issue of Journal of Information Processing.
 
 \bibliographystyle{abbrv}
 \bibliography{rg}
