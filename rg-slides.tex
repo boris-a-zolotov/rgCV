@@ -1,6 +1,6 @@
 \documentclass[aspectratio=1610,12pt,notheorems]{beamer}
 
-\definecolor{hard}{RGB}{0,95,150}
+\definecolor{hard}{RGB}{163,52,83}  % {0,95,150}
 \input{pres-defs}
 
 \def\fch#1#2{\frame{
@@ -28,6 +28,13 @@
 \frame{\titlepage}
 \fch{\ }{Sublinear Explicit Voronoi Diagrams}
 \fch{Ongoing research:}{\~Optimal-Time Voronoi Diagrams}
-\fch{Previous research:}{Polyhedra glued from regular pentagons}
+
+\input{parts/penta}
+
+\begin{frame}
+\scriptsize
+	\bibliography{zba_ths,rg}
+	\bibliographystyle{apalike}
+\end{frame}
 
 \end{document}

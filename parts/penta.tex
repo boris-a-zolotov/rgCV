@@ -1,0 +1,105 @@
+\fch{Previous research:}{Polyhedra glued from regular pentagons}
+
+\begin{frame}
+\frametitle{Gluings}
+
+\begin{definition}[{{\scriptsize Alexandrov 1950}}]
+\label{def:razvertka}
+	A {\itshape gluing} is a set of polygons equipped with
+	a number of rules describing \\ the way
+	edges of these polygons must be glued to each other.
+\end{definition} \bigskip
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[m]{0.41\textwidth}
+		\centering
+		\includegraphics[scale=1.12]{figs_pres/alex_example_1}
+	\end{subfigure}
+~
+	\centering
+	\begin{subfigure}[m]{0.48\textwidth}
+		\centering
+		\includegraphics[scale=0.81]{figs_pres/alex_example_stefan_1}
+	\end{subfigure}
+\end{figure} \vspace{2.8mm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Alexandrov's Theorem}
+
+\vspace{3.8mm}
+
+\begin{block}{Theorem}
+	\itshape
+	If a gluing is homeomorphic to a sphere and the sum of angles at each of its vertices is
+	$\le 360^\circ$\!, there $\exists\,!$ convex polyhedron that corresponds to this gluing.
+\end{block} \medskip
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[m]{0.46\textwidth}
+		\centering
+		\input{figs_pres/alex_example_2}
+	\end{subfigure}
+~
+	\centering
+	\begin{subfigure}[m]{0.46\textwidth}
+		\centering
+		\input{figs_pres/alex_example_stefan_2}
+	\end{subfigure}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%
+
+\begin{frame} \frametitle{Polyhedron Reconstruction}
+
+\textcolor{hard}{\bf The proof of Alexandrov's theorem is non-constructive.} \\
+Each of the following problems is still open:
+
+\smallskip
+
+\begin{block}{Alexandrov's Problem} \small
+	Given a gluing $\mathcal T$ satisfying the conditions of Alexandrov's Theorem, \\
+	find the convex polyhedron corresponding to it.
+\end{block}
+
+\begin{block}{Cauchy Rigidity Problem ({\scriptsize \acite{DO07}, 23.22})} \small
+	A {\itshape poly-time} algorithm that takes as input edge lengths of a triangulated
+	convex polyhedron, and outputs approximate coordinates of its vertices.
+\end{block}
+
+\begin{block}{Skeleton Reconstruction Problem} \small
+	A {\itshape poly-time} algorithm that, given a net satisfying the conditions of
+	Alexandrov's Theorem, {\itshape finds the skeleton} of the
+	convex polyhedron corresponding to it.
+\end{block} \vspace{2.5mm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%
+
+\begin{frame} \frametitle{Edge-to-Edge Gluings of Regular Polygons}
+\vspace{0.12cm}
+
+Maybe Alexandrov's Problem becomes easier, if we start building the gluings \\
+from similar simple blocks? \bigskip
+
+\begin{definition}[\acite{DO07,lo96-dynprog}]
+	A gluing is {\itshape edge-to-edge} if every edge is glued to another entire edge.
+\end{definition} \medskip
+
+\begin{center}
+	\includegraphics[width=11.4cm]{figs_pres/hex_glued} \\
+	\acite{kl17-hex}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%
+
+\input{parts/penta-frame}
+
+\input{parts/penta-results}
