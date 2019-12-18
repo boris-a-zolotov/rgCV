@@ -60,7 +60,7 @@ We create a data structure that explicitly maintains the graph of a Voronoi diag
 
 The time per insertion of a new site in our previous work is sublinear yet not optimal. We are now aiming at maintaining the Voronoi diagram while having optimal, $\Ot(N^{\frac12})$ time per insertion.
 
-Our idea is to use divide-and-conquer strategy. There is a known divide-and-conquaer algorithm for the static case of the Voronoi diagram, but it does not fit directly for semi-dynamic case. My coauthors and I are now working on this and hoping to obtain the result soon.
+The idea is to use divide-and-conquer strategy. There is a known divide-and-conquer algorithm for the static case of the Voronoi diagram: on each level the sites are divided into two roughly equal subsets by a vertical line, for each of them the diagram is calculated recursively, the two Voronoi diagrams are merged afterwards. The algorithm does not fit directly for semi-dynamic case. I am now working on figuring this out and hope to get the final result soon.
 
 \vsection{All convex polygons that can be glued from regular pentagons}
 
