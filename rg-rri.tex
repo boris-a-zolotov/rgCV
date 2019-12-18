@@ -46,7 +46,7 @@
 
 	Let $S \coloneqq \{s_1, s_2, \ldots, s_N\}$ be a set of $N$ distinct points in the Euclidean plane. \emph{Voronoi diagram} of $S$ is the subdivision of the plane into $N$ \emph{cells}, one for each site in $S$, with the property that a point $q$ lies in the cell corresponding to a site $s_i$ if and only if $\mathrm{dist} (q, s_i) < \mathrm{dist} (q, s_j)$ for each $s_j \in S$ with $j \ne i$.
 
-Voronoi diagrams have been of a great interest in TCS (computational geometry) and other domains since their first thorough study~\cite{v-vd} and the research on the subject is still going on~\cite{vd-new}. The aim of this work is to maintain the graph of a Voronoi diagram under insertion of new sites in time sublinear in $N$.
+Voronoi diagrams have been of a great interest in TCS (computational geometry) and other domains since their first thorough study~\cite{v-vd}, and the research on the subject is still going on~\cite{vd-new}. The aim of this work is to maintain the graph of a Voronoi diagram under insertion of new sites in time sublinear in $N$.
 
 It was observed previously~\cite{incremental-vd} that while there could be a linear number of changes to the embedded Voronoi diagram with each site insertion, this is not equivalent to the number of combinatorial changes to the graph structure of the Voronoi diagram. It was then proved by showing that the amortized number of combinatorial changes is only $\Theta(N^{\frac 12})$ per site insertion. This observation opened the possibility to maintain the Voronoi diagram graph in faster than linear time per insertion, which was consequently done for the restricted case where the sites are in convex position~\cite{incremental-vd}.
 
