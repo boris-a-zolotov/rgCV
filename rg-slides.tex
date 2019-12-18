@@ -3,11 +3,19 @@
 \definecolor{hard}{RGB}{0,95,150}
 \input{pres-defs}
 
-\def\fch#1{\frame{\ \\ \centerline{\Huge #1}}}
+\def\fch#1#2{\frame{
+    \begin{center}\begin{tabular}{c}
+	\makecell[l]{
+	    {\itshape\large #1} \\ [5mm]
+	    {\Huge #2}
+	}
+    \end{tabular}\end{center}
+}}
+
 \def\acite#1{{\scriptsize\citealt{#1}}}
 \addto\captionsrussian{\renewcommand{\refname}{Лит}}
 
-\title{Recent research achievements}
+\title{\LARGE Recent research achievements}
 
 \author{Boris Zolotov, {\small МКН СПбГУ}}
 
@@ -18,8 +26,8 @@
 \begin{document}
 
 \frame{\titlepage}
-\fch{Polyhedra glued from regular pentagons}
-\fch{Sublinear Explicit Voronoi Diagrams}
-\fch{\~Optimal-Time Voronoi Diagrams}
+\fch{\ }{Sublinear Explicit Voronoi Diagrams}
+\fch{Ongoing research:}{\~Optimal-Time Voronoi Diagrams}
+\fch{Previous research:}{Polyhedra glued from regular pentagons}
 
 \end{document}
