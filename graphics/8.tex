@@ -1,0 +1,73 @@
+\def\fltn#1#2#3{( 0.95 * #1 cm + 1.3 * 0.48 * #3 cm, 0.95 * #2 cm + 1.3 * 0.26 * #3 cm - 0.08 * #1 cm)}
+
+\begin{center} \tikz[rotate=75,scale=1.4]{
+\def\a{\fltn{1.7964059390811467}{0.0}{0.0} node{ }}
+\def\b{\fltn{1.0741858668825588}{0.3774601538724013}{0.5795877841641639} node{ }}
+\def\c{\fltn{0.4627696824462514}{-0.37047892722529857}{0.8379622805377634} node{ }}
+\def\d{\fltn{0.4627696824462251}{-0.9162070816198993}{-0.000000000674378481} node{ }}
+\def\e{\fltn{1.0741858668825224}{-0.3774601544164369}{-0.5795877838098117} node{ }}
+\def\f{\fltn{0.46276968244613376}{0.37047892643871677}{-0.8379622808853392} node{ }}
+\def\g{\fltn{0.4627696824461601}{0.9162070813351211}{0.0} node{ }}
+\def\h{\fltn{-1.796405938942955}{0.0000000000684636823}{-0.00000000034584134394} node{ }}
+\def\i{\fltn{-1.0741858671205824}{-0.579587784025112}{0.3774601534086557} node{ }}
+\def\j{\fltn{-0.46276968266375634}{-0.0000000009484149785}{0.9162070812362096} node{ }}
+\def\k{\fltn{-0.4627696822356244}{0.8379622786720125}{0.3704789273536469} node{ }}
+\def\l{\fltn{-1.0741858665333857}{0.5795877843576744}{-0.3774601545686791} node{ }}
+\def\m{\fltn{-0.4627696825916457}{-0.8379622802654594}{-0.3704789276593546} node{ }}
+\def\n{\fltn{-0.462769682167164}{0.0000000011376730667}{-0.9162070817606903} node{ }}
+
+\draw [color=thr] \a -- \c;
+\draw [color=thr] \b -- \j;
+\draw [color=thr] \b -- \k;
+\draw [color=thr] \c -- \i;
+\draw [color=thr] \d -- \i;
+\draw [color=thr] \h -- \j;
+\draw [color=thr] \h -- \k;
+
+\draw [color=thr] \b -- \c;
+\draw [color=thr] \c -- \d;
+\draw [color=thr] \c -- \j;
+\draw [color=thr] \i -- \j;
+\draw [color=thr] \j -- \k;
+\draw [color=thr] \i -- \m;
+\draw [color=thr] \h -- \i;
+
+\draw [thick,color=edThr, dashed] \b -- \c;
+\draw [thick,color=edThr, dashed] \c -- \d;
+\draw [thick,color=edThr, dashed] \c -- \j;
+\draw [thick,color=edThr, dashed] \i -- \j;
+\draw [thick,color=edThr, dashed] \j -- \k;
+\draw [thick,color=edThr, dashed] \i -- \m;
+\draw [thick,color=edThr, dashed] \h -- \i;
+
+\zal 4 \a -- \b -- \g -- \f -- \e -- cycle;
+\zal 3 \h -- \l -- \n -- \m -- cycle;
+\zal 6 \d -- \e -- \a -- cycle;
+\zal 1 \m -- \n -- \f -- \e -- \d -- cycle;
+\zal 2 \k -- \g -- \f -- \n -- \l -- cycle;
+
+\draw \a -- \g;
+\draw \a -- \f;
+\draw \a -- \d;
+\draw \e -- \m;
+\draw \e -- \n;
+\draw \g -- \l;
+\draw \f -- \l;
+\draw \h -- \n;
+\draw \h -- \m;
+
+\draw [thick,color=edHr] \a -- \b;
+\draw [thick,color=edHr] \a -- \e;
+\draw [thick,color=edHr] \b -- \g;
+\draw [thick,color=edHr] \d -- \e;
+\draw [thick,color=edHr] \d -- \m;
+\draw [thick,color=edHr] \e -- \f;
+\draw [thick,color=edHr] \f -- \g;
+\draw [thick,color=edHr] \f -- \n;
+\draw [thick,color=edHr] \g -- \k;
+\draw [thick,color=edHr] \h -- \l;
+\draw [thick,color=edHr] \k -- \l;
+\draw [thick,color=edHr] \l -- \n;
+\draw [thick,color=edHr] \m -- \n;
+
+} \end{center}

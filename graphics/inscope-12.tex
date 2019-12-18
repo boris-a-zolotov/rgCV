@@ -1,0 +1,54 @@
+\def\fl#1#2#3{(0.94868 * #1 cm + 0.56 * 1.2 * #2 cm,
+	-0.42 * 0.72 * #1 cm + 0.6 * 0.72 * 1.2 * #2 cm + 1.05 * #3 cm)}
+\def\zl#1{\filldraw[thick , color=edHr , fill=fill#1 , fill opacity = 0.55] }
+\def\g{1.618034}
+\def\gg{0.618034}
+
+\def\AA{\fl{0}{\g}{\gg}}
+\def\AB{\fl{0}{\g}{-1 * \gg}}
+\def\AC{\fl{0}{-1 * \g}{\gg}}
+\def\AD{\fl{0}{-1 * \g}{-1 * \gg}}
+
+\def\BA{\fl{\g}{\gg}{0}}
+\def\BB{\fl{\g}{-1 * \gg}{0}}
+\def\BC{\fl{-1 * \g}{\gg}{0}}
+\def\BD{\fl{-1 * \g}{-1 * \gg}{0}}
+
+\def\CA{\fl{\gg}{0}{\g}}
+\def\CB{\fl{-1 * \gg}{0}{\g}}
+\def\CC{\fl{\gg}{0}{-1 * \g}}
+\def\CD{\fl{-1 * \gg}{0}{-1 * \g}}
+
+\def\UTR{\fl{1}{1}{1}}
+\def\UTL{\fl{-1}{1}{1}}
+\def\UBR{\fl{1}{-1}{1}}
+\def\UBL{\fl{-1}{-1}{1}}
+
+\def\DTR{\fl{1}{1}{-1}}
+\def\DTL{\fl{-1}{1}{-1}}
+\def\DBR{\fl{1}{-1}{-1}}
+\def\DBL{\fl{-1}{-1}{-1}}
+
+\draw[color=thr] \BA -- \UTR -- \AA -- \AB -- \DTR -- cycle;
+\draw[color=thr] \AA -- \AB -- \DTL -- \BC -- \UTL -- cycle;
+
+\draw[color=thr] \BC -- \BD -- \DBL -- \CD -- \DTL -- cycle;
+\draw[color=thr] \BD -- \BC -- \UTL -- \CB -- \UBL -- cycle;
+
+\draw[color=thr] \CC -- \CD -- \DTL -- \AB -- \DTR -- cycle;
+\draw[color=thr] \CC -- \CD -- \DBL -- \AD -- \DBR -- cycle;
+
+\draw[thick,color=edThr,dashed] \UTL -- \BC -- \BD;
+\draw[thick,color=edThr,dashed] \AA -- \AB -- \DTR;
+\draw[thick,color=edThr,dashed] \BC -- \DTL -- \AB;
+\draw[thick,color=edThr,dashed] \DTL -- \CD;
+\draw[thick,color=edThr,dashed] \DBL -- \CD -- \CC;
+
+\zl 4 \AC -- \AD -- \DBR -- \BB -- \UBR -- cycle;
+\zl 6 \AC -- \AD -- \DBL -- \BD -- \UBL -- cycle;
+
+\zl 1 \BB -- \BA -- \UTR -- \CA -- \UBR -- cycle;
+\zl 2 \BA -- \BB -- \DBR -- \CC -- \DTR -- cycle;
+
+\zl 3 \CB -- \CA -- \UBR -- \AC -- \UBL -- cycle;
+\zl 5 \CB -- \UTL -- \AA -- \UTR -- \CA -- \CB;

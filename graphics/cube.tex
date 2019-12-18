@@ -1,0 +1,14 @@
+\begin{center} \tikz{
+\def\a{\fltn{0}{0}{0}}
+\def\e{\fltn{0}{0}{1}}
+\def\d{\fltn{0}{1}{0}}
+\def\h{\fltn{0}{1}{1}}
+\def\b{\fltn{1}{0}{0}}
+\def\f{\fltn{1}{0}{1}}
+\def\c{\fltn{1}{1}{0}}
+\def\g{\fltn{1}{1}{1}}
+
+\draw \a -- \b -- \c -- \d -- cycle;
+\draw \h -- \e -- \f -- \g -- cycle;
+\draw \a -- \e; \draw \b -- \f; \draw \c -- \g; \draw \d -- \h;
+} \end{center}

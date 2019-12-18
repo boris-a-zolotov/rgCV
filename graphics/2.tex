@@ -1,0 +1,27 @@
+\def\fltn#1#2#3{(-0.85 * #1 cm + 1.2 * 0.7 * #3 cm + 0.5 * #2 cm,
+	1.02 * #2 cm - 1.2 * 0.4 * #3 cm - 0.1 * #1 cm)}
+
+\begin{center} \tikz[scale=1.4,rotate=25]{
+\def\a{\fltn{0.7150286699726232}{0.0}{0.0} node{ }}
+\def\b{\fltn{-0.31405294951344975}{0.8481487561449743}{-0.9163273343621601} node{ }}
+\def\c{\fltn{-0.31405295029381125}{-0.8481662893257657}{0.9163111045353434} node{ }}
+\def\d{\fltn{-0.16391141635587947}{-0.47693220123372715}{-0.0000091269006132692} node{ }}
+\def\e{\fltn{-0.16391141696515857}{0.476932200185524}{0.0} node{ }}
+\def\f{\fltn{-0.31405295029381125}{0.0}{0.0} node{ }}
+
+\draw [color=thr] \a -- \e;
+\draw [thick,color=edThr, dashed] \a -- \e;
+
+\zal 1 \b -- \e -- \f -- \d -- \a -- cycle;
+\zal 4 \e -- \c -- \a -- \d -- \f -- cycle;
+
+\draw \a -- \b;
+\draw \a -- \c;
+\draw \b -- \f;
+\draw \f -- \c;
+\draw \b -- \d;
+\draw \c -- \e;
+
+\draw [thick,color=edHr] \c -- \d;
+\draw [thick,color=edHr] \b -- \e -- \f -- \d -- \a;
+} \end{center}

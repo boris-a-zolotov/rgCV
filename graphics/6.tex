@@ -1,0 +1,49 @@
+\def\fltn#1#2#3{( #1 cm - 0.38 * #2 cm, #3 cm - 0.2 * #2 cm)}
+
+\begin{center} \tikz[scale=1.28]{
+\def\a{\fltn{1.4310957967719642}{0.0}{0.0} node{ }}
+\def\b{\fltn{0.7162308035620336}{0.3787815383028905}{-0.587786175174265} node{ }}
+\def\c{\fltn{-0.7155478984982786}{0.00000000009007338}{-1.2393653153906468} node{ }}
+\def\d{\fltn{-0.8671531615396659}{0.3787815383070919}{-0.3263809830922096} node{ }}
+\def\e{\fltn{-0.7155478985611488}{-0.0000000003687175}{1.2393653153533593} node{ }}
+\def\f{\fltn{0.15092235791116757}{0.3787815381579165}{0.9141671585035448} node{ }}
+\def\g{\fltn{-0.0000000000001461}{0.7549741064176964}{0.0} node{ }}
+\def\h{\fltn{0.15092235791177575}{-0.3787815383030031}{-0.9141671584442804} node{ }}
+\def\i{\fltn{-0.8671531614092768}{-0.37878153847290486}{0.32638098324776055} node{ }}
+\def\j{\fltn{0.7162308035616037}{-0.37878153839618434}{0.5877861751136217} node{ }}
+\def\k{\fltn{-0.0000000000001931}{-0.7549741069521263}{0.000000000221224} node{ }}
+
+\draw [color=thr] \g -- \a -- \b -- cycle;
+\draw [color=thr]\g -- \b -- \c -- cycle;
+\draw [color=thr] \g -- \d -- \e -- cycle;
+\draw [color=thr] \g -- \c -- \d -- cycle;
+\draw [color=thr] \g -- \e -- \f -- cycle;
+\draw [color=thr] \g -- \a -- \f -- cycle;
+\draw [color=thr] \j -- \e -- \f -- cycle;
+\draw [color=thr] \j -- \a -- \f -- cycle;
+\draw [color=thr] \h -- \c -- \b -- cycle;
+
+\draw [thick,color=edThr, dashed] \j -- \f -- \g -- \b;
+\draw [thick,color=edThr, dashed] \e -- \f;
+\draw [thick,color=edThr, dashed] \g -- \d;
+\draw [thick,color=edThr, dashed] \b -- \h;
+
+\zal 1 \c -- \d -- \i -- \k -- \h -- cycle;
+\zal 2 \b -- \h -- \k -- \j -- \a -- cycle;
+\zal 4 \j -- \k -- \i -- \e -- cycle;
+\zal 3 \e -- \i -- \d -- cycle;
+
+\draw \h -- \b -- \a -- cycle;
+\draw \i -- \d -- \c -- cycle;
+\draw \i -- \e -- \d -- cycle;
+\draw \k -- \h -- \a -- cycle;
+\draw \k -- \c -- \h -- cycle;
+\draw \k -- \i -- \c -- cycle;
+\draw \k -- \e -- \i -- cycle;
+\draw \k -- \j -- \e -- cycle;
+\draw \k -- \a -- \j -- cycle;
+
+\draw [thick,color=edHr] \e -- \i -- \k -- \j;
+\draw [thick,color=edHr] \a -- \j -- \k -- \h -- \b -- cycle;
+\draw [thick,color=edHr] \h -- \c -- \d -- \i -- \k -- cycle;
+} \end{center}

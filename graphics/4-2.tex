@@ -1,0 +1,31 @@
+\def\fltn#1#2#3{( 0.48 * 1.1 * #2 cm - 0.71 * 1.1 * #1 cm, 0.8 * #3 cm - 0.3 * #1 cm - 0.35 * #2 cm )}
+
+\begin{center} \tikz[scale=1.5]{
+\def\a{\fltn{1.1441186330689892}{0.0}{0.0} node{ }}
+\def\b{\fltn{-0.00000096041478}{0.6605555441877259}{-0.9341722591401773} node{ }}
+\def\c{\fltn{-1.1441193883103131}{-0.0000043143566}{-0.0000016231994} node{ }}
+\def\d{\fltn{0.0000002051230056}{-0.660552576215044}{0.9341757852715699} node{ }}
+\def\e{\fltn{0.3535525197824853}{-0.612376698215449}{0.000002436489} node{ }}
+\def\f{\fltn{-0.35355132602086625}{-0.20413060947901404}{-0.577352984617954} node{ }}
+\def\g{\fltn{0.35355410836555906}{0.612378749043792}{0.0} node{ }}
+\def\h{\fltn{-0.35355291484900464}{0.204129462645888}{0.5773492685115242} node{ }}
+
+\draw [color=thr] \d -- \e -- \f -- \c;
+\draw [color=thr] \a -- \e;
+\draw [color=thr] \f -- \b;
+
+\draw [thick,color=edThr, dashed] \d -- \e -- \f -- \c;
+\draw [thick,color=edThr, dashed] \a -- \e;
+\draw [thick,color=edThr, dashed] \f -- \b;
+
+\zal 2 \d -- \h -- \g -- \a -- cycle;
+\zal 6 \d -- \h -- \c -- cycle;
+\zal 1 \c -- \h -- \g -- \b -- cycle;
+\zal 5 \a -- \g -- \b -- cycle;
+
+\draw \a -- \b -- \c -- \d -- cycle;
+
+\draw [thick,color=edHr] \d -- \h -- \g -- \a;
+\draw [thick,color=edHr] \c -- \h;
+\draw [thick,color=edHr] \g -- \b;
+} \end{center}
