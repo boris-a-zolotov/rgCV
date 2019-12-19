@@ -28,7 +28,7 @@
 %%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Alexandrov's Theorem}
+\frametitle{Alexandrov's Uniqueness Theorem}
 
 \vspace{3.8mm}
 
@@ -58,25 +58,18 @@
 
 \begin{frame} \frametitle{Polyhedron Reconstruction}
 
-\textcolor{hard}{\bf The proof of Alexandrov's theorem is non-constructive.} \\
-Each of the following problems is still open:
+\textcolor{hard}{\bf The proof of Alexandrov's theorem is non-constructive.} \smallskip \\
+The algorithmic question remains open: how to find the polyhedron corresponding to a net?
+\bigskip \\ \pause
 
-\smallskip
-
-\begin{block}{Alexandrov's Problem} \small
-	Given a gluing $\mathcal T$ satisfying the conditions of Alexandrov's Theorem, \\
-	find the convex polyhedron corresponding to it.
-\end{block}
+Each of the following problems is still open: \medskip
 
 \begin{block}{Cauchy Rigidity Problem ({\scriptsize \acite{DO07}, 23.22})} \small
-	A {\itshape poly-time} algorithm that takes as input edge lengths of a triangulated
-	convex polyhedron, and outputs approximate coordinates of its vertices.
-\end{block}
+	Given edge lengths of a triangulated convex polyhedron, output approximate coordinates of its vertices {\it in polynomial time.}
+\end{block} \medskip \pause
 
 \begin{block}{Skeleton Reconstruction Problem} \small
-	A {\itshape poly-time} algorithm that, given a net satisfying the conditions of
-	Alexandrov's Theorem, {\itshape finds the skeleton} of the
-	convex polyhedron corresponding to it.
+	Given a net satisfying the conditions of	Alexandrov's Theorem, find the skeleton of the convex polyhedron corresponding to it {\it in polynomial time.}
 \end{block} \vspace{2.5mm}
 \end{frame}
 
