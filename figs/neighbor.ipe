@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70212" creator="Ipe 7.2.12">
-<info created="D:20190830215643" modified="D:20190830215643"/>
+<info created="D:20190830215643" modified="D:20191219204207"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -220,13 +220,13 @@ h
 <dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
 <dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
 <textsize name="large" value="\large"/>
+<textsize name="small" value="\small"/>
+<textsize name="tiny" value="\tiny"/>
 <textsize name="Large" value="\Large"/>
 <textsize name="LARGE" value="\LARGE"/>
 <textsize name="huge" value="\huge"/>
 <textsize name="Huge" value="\Huge"/>
-<textsize name="small" value="\small"/>
 <textsize name="footnote" value="\footnotesize"/>
-<textsize name="tiny" value="\tiny"/>
 <textstyle name="center" begin="\begin{center}" end="\end{center}"/>
 <textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
 <textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
@@ -252,20 +252,22 @@ h
 <tiling name="rising" angle="30" step="4" width="1"/>
 </ipestyle>
 <page>
-<layer name="alpha"/>
-<layer name="beta"/>
-<view layers="alpha beta" active="alpha"/>
-<use layer="alpha" name="mark/square(sx)" pos="130.89 489.232" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="193.17 559.208" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="299.534 550.811" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="381.407 480.834" size="large" stroke="black"/>
-<use matrix="1 0 0 1 6.78466 -37.7873" name="mark/square(sx)" pos="379.307 399.661" size="large" stroke="black"/>
-<use matrix="1 0 0 1 -4.89836 -23.7921" name="mark/square(sx)" pos="284.839 338.782" size="large" stroke="black"/>
-<use matrix="1 0 0 1 5.59813 -13.9953" name="mark/square(sx)" pos="163.08 391.264" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="380.707 581.601" size="large" stroke="black"/>
-<use matrix="1 0 0 1 13.9953 6.2979" name="mark/square(sx)" pos="260.347 638.282" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="482.873 451.444" size="large" stroke="black"/>
-<group layer="beta">
+<layer name="sites"/>
+<layer name="cell"/>
+<layer name="diagramLines"/>
+<layer name="paw"/>
+<view layers="sites cell diagramLines paw" active="cell"/>
+<use layer="sites" matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="130.89 489.232" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="193.17 559.208" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="299.534 550.811" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="381.407 480.834" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 141.503 59.4815" name="mark/square(sx)" pos="379.307 399.661" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 135.286 66.9282" name="mark/square(sx)" pos="284.839 338.782" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 140.871 72.141" name="mark/square(sx)" pos="163.08 391.264" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="380.707 581.601" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 145.339 82.9389" name="mark/square(sx)" pos="260.347 638.282" size="normal" stroke="black"/>
+<use matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="482.873 451.444" size="normal" stroke="black"/>
+<group layer="diagramLines" matrix="0.532093 0 0 0.532093 137.893 79.5878">
 <path stroke="black">
 186.969 445.8 m
 199.832 490.576 l
@@ -355,8 +357,8 @@ h
 353.465 531.026 l
 </path>
 </group>
-<use layer="alpha" name="mark/square(sx)" pos="257.548 452.844" size="large" stroke="black"/>
-<path stroke="black" fill="lightgreen">
+<use layer="sites" matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="257.548 452.844" size="normal" stroke="black"/>
+<path layer="cell" matrix="0.532093 0 0 0.532093 137.893 79.5878" stroke="black" fill="lightgreen">
 243.344 516.912 m
 315.113 486.154 l
 330.233 419.246 l
@@ -366,9 +368,9 @@ h
 199.832 490.576 l
 h
 </path>
-<use name="mark/square(sx)" pos="257.548 452.844" size="large" stroke="black"/>
-<use name="mark/disk(sx)" pos="353.465 531.026" size="large" stroke="red"/>
-<text matrix="1 0 0 1 -1.18684 -6.71215" transformations="translations" pos="360.001 539.48" stroke="black" type="label" width="12.623" height="10.672" depth="0" valign="baseline" size="Huge" style="math">v</text>
-<text matrix="1 0 0 1 20.796 5.05849" transformations="translations" pos="272.023 422.574" stroke="black" type="label" width="10.319" height="17.213" depth="0" valign="baseline" size="Huge" style="math">b</text>
+<use layer="sites" matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/square(sx)" pos="257.548 452.844" size="normal" stroke="black"/>
+<use layer="paw" matrix="0.532093 0 0 0.532093 137.893 79.5878" name="mark/disk(sx)" pos="353.465 531.026" size="large" stroke="red"/>
+<text layer="cell" matrix="0.532093 0 0 0.532093 143.427 83.5894" transformations="translations" pos="272.023 422.574" stroke="black" type="label" width="7.167" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">b</text>
+<text layer="paw" matrix="1 0 0 1 -0.77576 12.6497" transformations="translations" pos="330.471 353.24" stroke="black" type="label" width="81.953" height="9.962" depth="2.79" valign="baseline" size="Large">$v$ --- paw of $b$</text>
 </page>
 </ipe>

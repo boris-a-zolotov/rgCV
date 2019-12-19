@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70212" creator="Ipe 7.2.12">
-<info created="D:20190928135821" modified="D:20190928135821"/>
+<info created="D:20190928135821" modified="D:20191219203032"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -220,13 +220,13 @@ h
 <dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
 <dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
 <textsize name="large" value="\large"/>
+<textsize name="small" value="\small"/>
+<textsize name="tiny" value="\tiny"/>
 <textsize name="Large" value="\Large"/>
 <textsize name="LARGE" value="\LARGE"/>
 <textsize name="huge" value="\huge"/>
 <textsize name="Huge" value="\Huge"/>
-<textsize name="small" value="\small"/>
 <textsize name="footnote" value="\footnotesize"/>
-<textsize name="tiny" value="\tiny"/>
 <textstyle name="center" begin="\begin{center}" end="\end{center}"/>
 <textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
 <textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
@@ -257,20 +257,20 @@ h
 <layer name="circle"/>
 <layer name="text"/>
 <view layers="vertices diagram circle text" active="text"/>
-<path layer="circle" stroke="blue" fill="lightblue" opacity="75%" stroke-opacity="opaque">
+<path layer="circle" matrix="0.484075 0 0 0.484075 176.127 156.547" stroke="blue" fill="lightblue" opacity="75%" stroke-opacity="opaque">
 89.2245 0 0 89.2245 271.366 490.83 e
 </path>
-<use layer="vertices" name="mark/square(sx)" pos="224.724 566.893" size="large" stroke="black"/>
-<use matrix="1 0 0 1 12.7273 14.5455" name="mark/square(sx)" pos="199.533 409.445" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="357.68 468.225" size="large" stroke="black"/>
-<use matrix="1 0 0 1 -29.0911 2.72729" name="mark/square(sx)" pos="350.682 633.37" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="410.862 554.297" size="large" stroke="black"/>
-<use name="mark/square(sx)" pos="426.957 396.15" size="large" stroke="black"/>
-<use matrix="1 0 0 1 -6.36367 -16.3637" name="mark/square(sx)" pos="363.978 323.374" size="large" stroke="black"/>
-<use matrix="1 0 0 1 -50.0003 -5.45457" name="mark/square(sx)" pos="275.107 306.579" size="large" stroke="black"/>
-<use matrix="1 0 0 1 11.8182 18.1819" name="mark/square(sx)" pos="126.757 592.084" size="large" stroke="black"/>
-<use matrix="1 0 0 1 -10.0001 -44.5457" name="mark/square(sx)" pos="91.7687 520.708" size="large" stroke="black"/>
-<group layer="diagram">
+<use layer="vertices" matrix="0.484075 0 0 0.484075 176.127 156.547" name="mark/square(sx)" pos="224.724 566.893" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 182.287 163.588" name="mark/square(sx)" pos="199.533 409.445" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 176.127 156.547" name="mark/square(sx)" pos="357.68 468.225" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 162.044 157.867" name="mark/square(sx)" pos="350.682 633.37" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 176.127 156.547" name="mark/square(sx)" pos="410.862 554.297" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 176.127 156.547" name="mark/square(sx)" pos="426.957 396.15" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 173.046 148.625" name="mark/square(sx)" pos="363.978 323.374" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 151.923 153.906" name="mark/square(sx)" pos="275.107 306.579" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 181.847 165.348" name="mark/square(sx)" pos="126.757 592.084" size="normal" stroke="black"/>
+<use matrix="0.484075 0 0 0.484075 171.286 134.983" name="mark/square(sx)" pos="91.7687 520.708" size="normal" stroke="black"/>
+<group layer="diagram" matrix="0.484075 0 0 0.484075 176.127 156.547">
 <path stroke="black">
 107.37 350.919 m
 30.0017 287.561 l
@@ -352,7 +352,7 @@ h
 391.2 622.451 l
 </path>
 </group>
-<use name="mark/disk(sx)" pos="271.366 490.83" size="large" stroke="red"/>
-<text layer="text" matrix="1 0 0 1 -0.727753 -5.23982" transformations="translations" pos="281.469 485.588" stroke="black" type="label" width="12.623" height="10.672" depth="0" valign="baseline" size="Huge" style="math">v</text>
+<use matrix="0.484075 0 0 0.484075 176.127 156.547" name="mark/disk(sx)" pos="271.366 490.83" size="normal" stroke="red"/>
+<text layer="text" matrix="0.484075 0 0 0.484075 175.774 154.01" transformations="translations" pos="281.469 485.588" stroke="black" type="label" width="12.623" height="10.672" depth="0" valign="baseline" size="Huge" style="math">v</text>
 </page>
 </ipe>

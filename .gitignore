@@ -1,3 +1,6 @@
+figs_processing/*
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
