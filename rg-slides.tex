@@ -12,6 +12,16 @@
     \end{tabular}\end{center}
 }}
 
+\def\nfch#1#2#3{\frame{
+    \begin{center}\begin{tabular}{c}
+	\makecell[l]{
+	    {\itshape\large #1} \\ [5mm]
+	    {\Huge #2} \\ [3mm]
+	    {\Huge #3}
+	}
+    \end{tabular}\end{center}
+}}
+
 \def\acite#1{{\scriptsize\citealt{#1}}}
 \addto\captionsrussian{\renewcommand{\refname}{Лит}}
 
@@ -26,8 +36,8 @@
 \begin{document}
 
 \frame{\titlepage}
-\fch{\ }{Sublinear Explicit Voronoi Diagrams}
-\fch{Ongoing research:}{\~Optimal-Time Voronoi Diagrams}
+\nfch{\ }{Sublinear Explicit}{Incremental Voronoi Diagrams}
+\nfch{Ongoing research:}{\~Optimal-Time Incremental}{\Huge Voronoi Diagrams}
 
 \input{parts/penta}
 
