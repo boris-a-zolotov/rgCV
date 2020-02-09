@@ -1,0 +1,68 @@
+\documentclass[aspectratio=169,12pt,notheorems]{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,caption,subcaption}
+\usepackage{hyperref,natbib}
+\usepackage{tikz,xcolor}
+\usepackage{algorithm,algpseudocode}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}[theorem]{Лемма}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\newtheorem{problem}{Задача}
+
+\usetheme[height=0.95cm]{Rochester}
+\usecolortheme{dolphin}
+
+\definecolor{hard}{RGB}{24,15,148}
+
+\setbeamercolor{headline}{bg=hard,fg=white}
+\setbeamercolor*{frametitle}{parent=headline}
+
+\setbeamercolor{structure}{fg=hard}
+\setbeamercolor{subsection in head/foot}{bg=white,fg=hard}
+\setbeamercolor{section in head/foot}{bg=hard,fg=white}
+\setbeamercolor{block title}{bg=hard,fg=white}
+
+\setbeamertemplate{navigation symbols}{}
+
+\def\scolon{\rlap{,}\raisebox{0.8ex}{,} }
+\def\mitem{\medskip\item}
+\def\ps{\\ [0.65cm]} \linespread{1.16}
+
+\def\ll{\left(} \def\rr{\right)}
+\def\lag{\left\langle} \def\rag{\right\rangle}
+
+\DeclareMathOperator{\ans}{\text{\scshape ans}}
+
+\title[Incremental Voronoi Diagrams]
+	{\bfseries Incremental (Combinatorial)
+	     Voronoi Diagrams}
+
+\author[\ ]
+	{Boris Zolotov, Mag. 1 \\ \vspace{0.3cm}
+		{\small Modern Methods in Computer Science}}
+
+\institute[\ ]{\ }
+
+\date{February 11, 2020}
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame} \begin{center}
+	{\Huge Thank you for your attention} \ps
+\end{center}
+	{\it Some contents here maybe}
+\end{frame}
+
+\end{document}
