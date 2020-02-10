@@ -9,12 +9,12 @@
 \usepackage{algorithm,algpseudocode}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Теорема}
-\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Определение}
-\newtheorem{problem}{Задача}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
 
 \usetheme[height=0.95cm]{Rochester}
 \usecolortheme{dolphin}
@@ -55,9 +55,11 @@
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 
-\begin{document}
+\begin{document} \def\mC{\mathcal C}
 
 \frame{\titlepage}
+
+\input{parts/intro}
 
 \begin{frame} \begin{center}
 	{\Huge Thank you for your attention} \ps
