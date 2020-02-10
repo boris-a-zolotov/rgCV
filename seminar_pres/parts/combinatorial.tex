@@ -1,0 +1,78 @@
+\begin{frame} \frametitle{Flarb: Results}
+\begin{theorem}
+	$\mG(G, \mC)$ has at most two more vertices than $G$ (3-regular graph inside).
+\end{theorem} \medskip
+\begin{theorem}
+	$\mG(G, \mC)$ contains one more face than $G$ (if it comes to Voronoi diagrams).
+\end{theorem} \medskip
+\begin{theorem}
+	For any new point, there exists a curve such that the changes the graph \\
+	of V. D. undergoes can be represented by Flarb.
+\end{theorem}
+\end{frame}
+
+\begin{frame} \frametitle{Preserving operation}
+\begin{center}
+	Sometimes no links and cuts are needed. \\ \vspace{-0.15cm}
+	\includegraphics[width=6cm]{flarb/4cost-free}
+\end{center} \vspace{-0.6cm}
+
+$\mathcal P(G,\mC)$ — the set of {\it preserved} faces. $\mathcal B(G,\mC)$ — faces wholly inside $\mC$. \\
+$\mathcal A(G,\mC)$ — augmented, $\mathcal S(G,\mC)$ — shrinking.
+\end{frame}
+
+\begin{frame} \frametitle{Combinatorial Cost of Flarb}
+\begin{center}
+	{\scshape cost} is how many links / cuts are to be made. \\ \vspace{0.8cm}
+	\includegraphics[width=14cm]{figs/2-6.png} \\ \vspace{0.8cm}
+	\includegraphics[width=14cm]{figs/2-8.png}
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Potential functions}
+{\it Amortized complexity analysis} requires a potential function {\it and maybe a couple examples.} \bigskip
+
+\begin{enumerate}
+	\item Local:
+	$$\mu(f) = \min\left\{ \left\lceil
+		\sqrt{\left| V \right|}
+	\right\rceil, |f| \right\}.$$ \smallskip
+	
+	\item Global:
+	$$\Phi = \lambda \cdot \sum_f \mu(f).$$
+\end{enumerate} \bigskip
+
+Really big faces don't change potential. \\
+$\lambda$ will be later set to 24.
+\end{frame}
+
+\begin{frame} \frametitle{Flarbable Sub-Curves}
+\begin{center}
+	\includegraphics[width=14cm]{figs/subcurve.png} \\ \vspace{0.8cm}
+	\includegraphics[width=14cm]{figs/3-3.png} \\ \vspace{0.4cm}
+	\includegraphics[width=14cm]{figs/3-4.png}
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Shrinking Faces}
+	It turns out that the variation in size of the $\mC$-faces after a flarb \\
+	depends only on the number of shrinking faces. \\ \vspace{0.6cm}
+\begin{center}
+	\includegraphics[width=14cm]{figs/3-5.png}
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Flarbable Sequences}
+\begin{center}
+	\includegraphics[width=14cm]{figs/3-6.png} \\ \vspace{0.5cm}
+	\includegraphics[width=14cm]{figs/3-7.png} \\ \vspace{0.3cm}
+	So this is really the amortized bound we needed.
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Flarbable Sequences}
+\begin{center}
+	\includegraphics[width=11.75cm]{figs/halin-iso.png} \\ \vspace{0.5cm}
+	Flarb produces a graph isomorphic to $G$ and has cost $\Omega \left( \nu \right)$.
+\end{center}
+\end{frame}
