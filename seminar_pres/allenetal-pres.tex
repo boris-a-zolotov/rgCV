@@ -55,11 +55,36 @@
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 
-\begin{document} \def\mC{\mathcal C}
+\begin{document}
+\def\mC{\mathcal C} \def\mF{\mathcal F}
+\def\mE{\mathcal E} \def\mG{\mathcal G}
 
 \frame{\titlepage}
 
 \input{parts/intro}
+
+\begin{frame} \frametitle{Flarb: Results}
+\begin{theorem}
+	$\mG(G, \mC)$ has at most two more vertices than $G$ (3-regular graph inside).
+\end{theorem} \medskip
+\begin{theorem}
+	$\mG(G, \mC)$ contains one more face than $G$ (if it comes to Voronoi diagrams).
+\end{theorem} \medskip
+\begin{theorem}
+	For any new point, there exists a curve such that the changes the graph \\
+	of V. D. undergoes can be represented by Flarb.
+\end{theorem}
+\end{frame}
+
+\begin{frame} \frametitle{Preserving operation}
+\begin{center}
+	Sometimes no links and cuts are needed. \\ \vspace{-0.15cm}
+	\includegraphics[width=6cm]{flarb/4cost-free}
+\end{center} \vspace{-0.6cm}
+
+$\mathcal P(G,\mC)$ — the set of {\it preserved} faces. $\mathcal B(G,\mC)$ — faces wholly inside $\mC$. \\
+$\mathcal A(G,\mC)$ — augmented, $\mathcal S(G,\mC)$ — shrinking.
+\end{frame}
 
 \begin{frame} \begin{center}
 	{\Huge Thank you for your attention} \ps
