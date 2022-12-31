@@ -1,8 +1,12 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{amsfonts,amssymb,amsmath,amsthm,mathtools}
 \usepackage{graphicx,xcolor,caption,subcaption,hyperref}
-\usepackage[russian]{babel}
-\usepackage[utf8x]{inputenc}
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{cmap}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage{csquotes}
+\RequirePackage[russian]{babel}
 
 \usepackage{tikz}
 \usetikzlibrary{calc,patterns}
@@ -18,9 +22,9 @@
 \headheight=16pt \headsep=6mm \footskip=6mm
 
 \def\defaultstyle{
-	\fancyhead[LO,LE]{{\sffamily Curriculum Vitae}}
-	\fancyhead[RO,RE]{{\sffamily {\large Boris Zolotov,} {\footnotesize МКН СПбГУ}}}
-	\fancyhead[CO,CE]{\ } \fancyfoot[CO,CE]{\thepage}
+	\fancyhead[L]{{\sffamily Curriculum Vitae}}
+	\fancyhead[R]{{\sffamily {\large Boris Zolotov,} {\footnotesize МКН СПбГУ}}}
+	\fancyhead[C]{\ } \fancyfoot[C]{\thepage}
 } \defaultstyle
 
 \begin{document}
