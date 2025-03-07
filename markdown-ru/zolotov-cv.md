@@ -43,6 +43,25 @@
 
 ## Публикации; препринты
 
+### *(В работе)* An Optimal Local Edit Distance Oracle
+
+В соавторстве с *А. Тискиным, Н. Гаевым* 
+
+### *(Принята к публикации)* Doubly-periodic string comparison
+
+В соавторстве с *А. Тискиным, Н. Гаевым*   
+Принята в *Combinatorial Pattern Matching 2025*
+
+### Sublinear Explicit Incremental Planar Voronoi Diagrams
+
+В соавторстве с *Elena Arseneva, John Iacono, Grigorios Koumoutsos, Stefan Langerman*   
+Опубликовано в *Journal of Information Processing, 28:766–774, 2020.*
+
+### A Complete List of All Convex Polyhedra Made by Gluing Regular Pentagons
+
+В соавторстве с *Elena Arseneva, Stefan Langerman*   
+Опубликовано в *Journal of Information Processing, 28:791–799, 2020.*
+
 ## Преподавание в университете
 
 ## Другие проекты
